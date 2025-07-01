@@ -1,28 +1,70 @@
-This is a simple console-based Blackjack game implemented in Python. The user plays against the computer (dealer) in an attempt to get as close to 21 as possible without going over. The game includes the standard Blackjack rules like dealing cards, score calculation, and Ace value adjustment.
+# Blackjack Game in Python
 
+Welcome to the **Blackjack Game**! This is a simple, interactive command-line implementation of the classic card game Blackjack, written in Python. The game allows you to play against the computer, simulating the basic rules and flow of Blackjack.
 
-Features
-Play a simplified version of Blackjack.
-Random card dealing from a standard Blackjack deck.
-Ace (11) value automatically adjusts to 1 if the total exceeds 21.
-Blackjack detection for an instant win (21 with two cards).
-Automatic dealer behavior (draws until score ≥ 17).
-Score comparison with game outcome display.
+## Features
 
-Prerequisites
-Python 3.x installed on your system.
+- Play against a computer dealer.
+- Handles Blackjack (Ace + 10) and bust scenarios.
+- Simple user input for "hit" or "stand".
+- Automatic dealer logic.
+- Replay option after each game.
 
-How to Play
-You and the computer are each dealt two cards.
+## How to Play
 
-The goal is to get a score as close to 21 as possible without exceeding it.
+- Run the script.
+- You and the computer are each dealt two cards.
+- Try to get as close to 21 as possible without going over.
+- Type `'y'` to get another card ("hit") or `'n'` to pass ("stand").
+- The computer will draw according to simple dealer rules.
+- The winner is determined based on standard Blackjack rules.
 
-Cards 2-10 are worth their number; face cards are worth 10; Ace can be 11 or 1.
+## Getting Started
 
-If your score is over 21, you lose.
+### Prerequisites
 
-You can choose to take another card or pass.
+- Python 3.x installed on your machine.
 
-The computer (dealer) draws until their score is 17 or higher.
+### Running the Game
 
-The highest score ≤ 21 wins. A Blackjack (21 with 2 cards) beats any other score.
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/Subham73-cmd/blackjack-python.git
+    cd blackjack-python
+    ```
+
+2. **Run the script:**
+    ```bash
+    python blackjack.py
+    ```
+
+## Code Overview
+
+The main functions in the script are:
+
+- `card_deck()`: Returns a random card from the deck.
+- `calculate_score(cards)`: Calculates the score for a hand.
+- `compare(u_score, c_score)`: Compares user and computer scores to determine the outcome.
+- `play_game()`: Orchestrates the flow of the game.
+
+## Example Gameplay
+
+```
+Your card: [8, 10], your score: 18
+Computer's first cards: 7
+Type 'y' to get another card or type 'n' to pass: n
+Final hand is [8, 10], final score is 18
+Computer's final hand [7, 10, 5], final score 22
+Opponent went over. You win
+Do you want to play blackjack game ? Type 'y' for yes or 'n' for no
+```
+
+## Notes
+
+- This is a basic version for educational purposes.
+
+## Author
+
+- [Subham Nayak](https://github.com/Subham73-cmd)
+
+Enjoy playing Blackjack! 🃏
